@@ -5,8 +5,8 @@
 ### Module:           '<%= scope.to_hash['module_name'] %>'
 ### Template source:  '<%= template_source %>'
 
-LV_MASTER=<%= "/dev/#{lvm_vg}/#{lv_master}" %>
-LV_SNAPSHOT=<%= "/dev/#{lvm_vg}/#{lv_snapshot}" %>
+LV_MASTER=<%= "/dev/#{@lvm_vg}/#{@lv_master}" %>
+LV_SNAPSHOT=<%= "/dev/#{@lvm_vg}/#{@lv_snapshot}" %>
 LV_MOUNTPOINT=<%= @mountpoint %>
 LV_SNAPSHOT_SIZE=<%= @snapshot_size %>
 

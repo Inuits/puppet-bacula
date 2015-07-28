@@ -4,18 +4,18 @@
 ### Template source:  '<%= template_source %>'
 
 Fileset {
-  name = "<%= name %>"
+  name = "<%= @name %>"
   include {
     Options {
       signature = MD5
     }
-<% include.each do |incl| -%>
+<% @include.each do |incl| -%>
     File = <%= incl %>
 <% end -%>
   }
-<% if !exclude.empty? -%>
+<% if !@exclude.empty? -%>
   exclude {
-<% exclude.each do |excl| -%>
+<% @exclude.each do |excl| -%>
     File = <%= excl %>
 <% end -%>
   }

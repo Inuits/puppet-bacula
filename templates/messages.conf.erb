@@ -4,17 +4,17 @@
 ### Template source:  '<%= template_source %>'
 
 Messages {
-  name                    = "<%= title %>"
-<% if !mailcommand.empty? -%>
-  mailcommand             = "<%= mailcommand %>"
+  name                    = "<%= @title %>"
+<% if !@mailcommand.empty? -%>
+  mailcommand             = "<%= @mailcommand %>"
 <% end -%>
-<% if !operatorcommand.empty? -%>
-  operatorcommand         = "<%= operatorcommand %>"
+<% if !@operatorcommand.empty? -%>
+  operatorcommand         = "<%= @operatorcommand %>"
 <% end -%>
-<% _messages.each do | type, dest, message | -%>
+<% @_messages.each do | type, dest, message | -%>
   <%= type %>             = "<%= dest %>" = <%= message %>
 <% end -%>
-<% if !mail.empty? %><% mail.each do | dest, message | -%>
+<% if !@mail.empty? %><% @mail.each do | dest, message | -%>
   mail                    = "<%= dest %>" = <%= message %>
 <% end %><% end -%>
 <% if @catalog -%>

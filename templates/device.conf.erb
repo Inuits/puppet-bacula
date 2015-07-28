@@ -4,9 +4,9 @@
 ### Template source:  '<%= template_source %>'
 
 Device {
-  name           = "<%= name %>-dev"
+  name           = "<%= @name %>-dev"
   media type     = "File"
-  archive device = "<%= path %>"
+  archive device = "<%= @path %>"
   labelmedia     = "yes";
   random access  = "Yes";
   automaticmount = "yes";

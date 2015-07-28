@@ -1,54 +1,54 @@
 
 Job {
-<% if name -%>
-  name                    = "<%= name %>"
+<% if @name -%>
+  name                    = "<%= @name %>"
 <% end -%>
-<% if client -%>
-  client                  = "<%= client %>-fd"
+<% if @client -%>
+  client                  = "<%= @client %>-fd"
 <% end -%>
-<% if jobtype -%>
-  type                    = "<%= jobtype %>"
+<% if @jobtype -%>
+  type                    = "<%= @jobtype %>"
 <% end -%>
 <% if @priority  -%>
   priority                = "<%= @priority %>"
 <% end -%>
-<% if working_dir -%>
-  write bootstrap         = "<%= working_dir %>/<%= name %>.bsr"
+<% if @working_dir -%>
+  write bootstrap         = "<%= @working_dir %>/<%= @name %>.bsr"
 <% end -%>
-<% if messages -%>
-  messages                = "<%= messages %>"
+<% if @messages -%>
+  messages                = "<%= @messages %>"
 <% end -%>
-<% if jobdefs -%>
-  jobdefs                 = "<%= jobdefs %>"
+<% if @jobdefs -%>
+  jobdefs                 = "<%= @jobdefs %>"
 <% end -%>
-<% if fileset -%>
-  fileset                 = "<%= fileset %>"
+<% if @fileset -%>
+  fileset                 = "<%= @fileset %>"
 <% end -%>
-<% if storage -%>
-  storage                 = "<%= storage %>"
+<% if @storage -%>
+  storage                 = "<%= @storage %>"
 <% end -%>
-<% if bschedule -%>
-  schedule                = "<%= bschedule %>"
+<% if @bschedule -%>
+  schedule                = "<%= @bschedule %>"
 <% end -%>
-<% if pool -%>
-  pool                    = "<%= pool %>"
+<% if @pool -%>
+  pool                    = "<%= @pool %>"
 <% end -%>
-<% if full_pool -%>
-  full backup pool        = "<%= full_pool %>"
+<% if @full_pool -%>
+  full backup pool        = "<%= @full_pool %>"
 <% end -%>
-<% if incremental_pool -%>
-  incremental backup pool = "<%= incremental_pool %>"
+<% if @incremental_pool -%>
+  incremental backup pool = "<%= @incremental_pool %>"
 <% end -%>
-<% if client_run_before_job -%>
-  client run before job   = "<%= client_run_before_job %>"
+<% if @client_run_before_job -%>
+  client run before job   = "<%= @client_run_before_job %>"
 <% end -%>
-<% if client_run_after_job  -%>
-  client run after job    = "<%= client_run_after_job %>"
+<% if @client_run_after_job  -%>
+  client run after job    = "<%= @client_run_after_job %>"
 <% end -%>
-<% if server_run_before_job -%>
-  run before job          = "<%= server_run_before_job %>"
+<% if @server_run_before_job -%>
+  run before job          = "<%= @server_run_before_job %>"
 <% end -%>
-<% if server_run_after_job  -%>
-  run after job           = "<%= server_run_after_job %>"
+<% if @server_run_after_job  -%>
+  run after job           = "<%= @server_run_after_job %>"
 <% end -%>
 }

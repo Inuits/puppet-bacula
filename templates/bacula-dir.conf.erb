@@ -4,21 +4,21 @@
 ### Template source:  '<%= template_source %>'
 
 Director {
-  name                    = "<%= server %>"
-  dirport                 = <%= port %>
-  queryFile               = "<%= config_root %>/query.sql"
-  workingDirectory        = "<%= working_dir %>"
-  piddirectory            = "<%= pid_dir %>"
-  maximum concurrent jobs = "<%= max_concurrent_jobs %>"
-  password                = "<%= password %>"
-  messages                = "<%= messages %>"
+  name                    = "<%= @server %>"
+  dirport                 = <%= @port %>
+  queryFile               = "<%= @config_root %>/query.sql"
+  workingDirectory        = "<%= @working_dir %>"
+  piddirectory            = "<%= @pid_dir %>"
+  maximum concurrent jobs = "<%= @max_concurrent_jobs %>"
+  password                = "<%= @password %>"
+  messages                = "<%= @messages %>"
 }
 
-@|"sh -c 'for f in <%= config_root %>/catalog.d/*.conf   ; do echo @${f} ; done'"
-@|"sh -c 'for f in <%= config_root %>/clients.d/*.conf   ; do echo @${f} ; done'"
-@|"sh -c 'for f in <%= config_root %>/filesets.d/*.conf  ; do echo @${f} ; done'"
-@|"sh -c 'for f in <%= config_root %>/jobdefs.d/*.conf   ; do echo @${f} ; done'"
-@|"sh -c 'for f in <%= config_root %>/messages.d/*.conf  ; do echo @${f} ; done'"
-@|"sh -c 'for f in <%= config_root %>/pools.d/*.conf     ; do echo @${f} ; done'"
-@|"sh -c 'for f in <%= config_root %>/schedules.d/*.conf ; do echo @${f} ; done'"
-@|"sh -c 'for f in <%= config_root %>/storage.d/*.conf   ; do echo @${f} ; done'"
+@|"sh -c 'for f in <%= @config_root %>/catalog.d/*.conf   ; do echo @${f} ; done'"
+@|"sh -c 'for f in <%= @config_root %>/clients.d/*.conf   ; do echo @${f} ; done'"
+@|"sh -c 'for f in <%= @config_root %>/filesets.d/*.conf  ; do echo @${f} ; done'"
+@|"sh -c 'for f in <%= @config_root %>/jobdefs.d/*.conf   ; do echo @${f} ; done'"
+@|"sh -c 'for f in <%= @config_root %>/messages.d/*.conf  ; do echo @${f} ; done'"
+@|"sh -c 'for f in <%= @config_root %>/pools.d/*.conf     ; do echo @${f} ; done'"
+@|"sh -c 'for f in <%= @config_root %>/schedules.d/*.conf ; do echo @${f} ; done'"
+@|"sh -c 'for f in <%= @config_root %>/storage.d/*.conf   ; do echo @${f} ; done'"

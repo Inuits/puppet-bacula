@@ -3,14 +3,14 @@
 ### Module:           '<%= scope.to_hash['module_name'] %>'
 ### Template source:  '<%= template_source %>'
 
-# <%= fqdn %> - Client (File Services) to backup / restore
+# <%= @fqdn %> - Client (File Services) to backup / restore
 
 Client {
-  name           = "<%= title %>-fd"
-  address        = "<%= _address %>"
-  fdport         = "<%= fd_port %>"
-  catalog        = "<%= catalog %>"
-  password       = "<%= fd_password %>"
+  name           = "<%= @title %>-fd"
+  address        = "<%= @_address %>"
+  fdport         = "<%= @fd_port %>"
+  catalog        = "<%= @catalog %>"
+  password       = "<%= @fd_password %>"
   file retention = 30 days
   job retention  = 6 months
   autoprune      = "yes"

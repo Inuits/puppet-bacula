@@ -3,7 +3,7 @@
 ### Module:           '<%= scope.to_hash['module_name'] %>'
 ### Template source:  '<%= template_source %>'
 
-<%= log_dir %>/*.log {
+<%= @log_dir %>/*.log {
   daily
   rotate 4
   notifempty

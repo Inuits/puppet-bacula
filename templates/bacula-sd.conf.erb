@@ -8,12 +8,12 @@
 #
 
 Storage {
-  name                    = "<%= label %>"
-  sdport                  = <%= port %>
-  workingdirectory        = "<%= working_dir %>"
-  pid directory           = "<%= pid_dir %>"
-  maximum concurrent jobs = "<%= max_concurrent_jobs %>"
-  messages                = "<%= messages %>"
+  name                    = "<%= @label %>"
+  sdport                  = <%= @port %>
+  workingdirectory        = "<%= @working_dir %>"
+  pid directory           = "<%= @pid_dir %>"
+  maximum concurrent jobs = "<%= @max_concurrent_jobs %>"
+  messages                = "<%= @messages %>"
 }
 
 #
@@ -21,12 +21,12 @@ Storage {
 #
 
 Director {
-  name                    = "<%= director_server %>"
-  password                = "<%= director_password %>"
+  name                    = "<%= @director_server %>"
+  password                = "<%= @director_password %>"
 }
 
 #
-# Load files in <%= config_root %>/[devices,messages].d
+# Load files in <%= @config_root %>/[devices,messages].d
 #
-@|"sh -c 'for f in <%= config_root %>/devices.d/*.conf;  do echo @${f}; done'"
-@|"sh -c 'for f in <%= config_root %>/messages.d/*.conf; do echo @${f}; done'"
+@|"sh -c 'for f in <%= @config_root %>/devices.d/*.conf;  do echo @${f}; done'"
+@|"sh -c 'for f in <%= @config_root %>/messages.d/*.conf; do echo @${f}; done'"

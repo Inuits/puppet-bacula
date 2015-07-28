@@ -8,11 +8,11 @@
 #
 
 FileDaemon {
-  name                    = "<%= client %>-fd"
-  fdport                  = <%= port %>
-  workingdirectory        = "<%= working_dir %>"
-  pid directory           = "<%= pid_dir %>"
-  maximum concurrent jobs = "<%= max_concurrent_jobs %>"
+  name                    = "<%= @client %>-fd"
+  fdport                  = <%= @port %>
+  workingdirectory        = "<%= @working_dir %>"
+  pid directory           = "<%= @pid_dir %>"
+  maximum concurrent jobs = "<%= @max_concurrent_jobs %>"
 }
 
 #
@@ -20,12 +20,12 @@ FileDaemon {
 #
 
 Director {
-  name                    = "<%= director_server %>"
-  password                = "<%= password %>"
+  name                    = "<%= @director_server %>"
+  password                = "<%= @password %>"
 }
 
 #
 # Include messages.d files
 #
 
-@|"sh -c 'for f in <%= config_root %>/messages.d/*.conf ; do echo @${f} ; done'"
+@|"sh -c 'for f in <%= @config_root %>/messages.d/*.conf ; do echo @${f} ; done'"

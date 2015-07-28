@@ -4,8 +4,8 @@
 ### Template source:  '<%= template_source %>'
 
 Schedule {
-  name = "<%= title %>"
-<% description.each do |desc| -%>
+  name = "<%= @title %>"
+<% @description.each do |desc| -%>
   run  = <%= desc %>
 <% end -%>
 }

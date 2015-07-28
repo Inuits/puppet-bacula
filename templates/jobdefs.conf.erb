@@ -4,14 +4,14 @@
 ### Template source:  '<%= template_source %>'
 
 JobDefs {
-  name     = "<%= name %>"
-  type     = "<%= jobtype %>"
-  level    = "<%= level %>"
-  fileset  = "<%= fileset %>"
-  schedule = "<%= bschedule %>"
-<% if messages -%>
-  messages = "<%= messages %>"
+  name     = "<%= @name %>"
+  type     = "<%= @jobtype %>"
+  level    = "<%= @level %>"
+  fileset  = "<%= @fileset %>"
+  schedule = "<%= @bschedule %>"
+<% if @messages -%>
+  messages = "<%= @messages %>"
 <% end -%>
-  pool     = "<%= pool %>"
-  priority = "<%= priority %>"
+  pool     = "<%= @pool %>"
+  priority = "<%= @priority %>"
 }

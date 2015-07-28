@@ -10,7 +10,6 @@ class bacula::common (
   $log_dir           = $::bacula::params::log_dir,
 ) inherits ::bacula::params {
 
-  include ::concat::setup
   class{'::bacula::bconsole':
     director_server   => $director_server,
     director_port     => $director_port,
